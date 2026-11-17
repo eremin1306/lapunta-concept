@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="pt-PT">
+<head>
+<meta charset="utf-8">
+<meta name="robots" content="noindex, nofollow">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>La Punta Foz — conceito de loja online</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Jost:wght@300;400;500&display=swap" rel="stylesheet">
+<style>
+*{box-sizing:border-box}
+body{margin:0;background:#F6F5F2;color:#141414;font-family:'Jost',system-ui,sans-serif;font-weight:300;-webkit-font-smoothing:antialiased}
+a{color:inherit;text-decoration:none}
+button{font-family:inherit;cursor:pointer}
+.concept{background:#6E5A44;color:#F6F5F2;font-size:12px;letter-spacing:.06em;text-align:center;padding:8px 16px}
+.bar{background:#141414;color:#F6F5F2;font-size:12px;letter-spacing:.12em;text-transform:uppercase;text-align:center;padding:10px 16px}
+header{display:flex;align-items:center;justify-content:space-between;gap:16px;padding:20px 48px;border-bottom:1px solid #E2E0DA;background:#F6F5F2;position:sticky;top:0;z-index:5}
+header nav{display:flex;gap:28px;flex:1;font-size:13px;letter-spacing:.08em;text-transform:uppercase}
+header .right{display:flex;gap:24px;flex:1;justify-content:flex-end;font-size:13px;letter-spacing:.08em;text-transform:uppercase}
+.logo{display:flex;flex-direction:column;align-items:center}
+.logo .la{font-size:15px;line-height:1}.logo .p{font-size:40px;line-height:.9}.logo .s{font-size:10px;letter-spacing:.18em;margin-top:6px}
+.burger{display:none;background:none;border:0;width:44px;height:44px;padding:0}
+.hero{display:flex;flex-wrap:wrap;min-height:640px}
+.hero .txt{flex:1 1 480px;background:#ECEAE5;padding:72px 64px;display:flex;flex-direction:column;justify-content:flex-end;gap:20px}
+.eyebrow{font-size:12px;letter-spacing:.2em;text-transform:uppercase;color:#5A5853}
+.hero h1{margin:0;font-size:clamp(40px,5vw,68px);font-weight:300;line-height:1.02}
+.hero p{margin:0;font-size:17px;line-height:1.6;color:#3A3935;max-width:460px}
+.link{align-self:flex-start;border-bottom:1px solid #141414;padding-bottom:4px;font-size:13px;letter-spacing:.12em;text-transform:uppercase}
+.hero .pic{flex:1 1 480px;background:#fff;display:flex;align-items:center;justify-content:center;min-height:480px}
+.hero .pic img{height:600px;max-height:80vw;max-width:100%;object-fit:contain}
+.brands{display:flex;flex-wrap:wrap;justify-content:center;gap:14px 40px;padding:36px 48px;border-bottom:1px solid #E2E0DA;font-size:14px;letter-spacing:.14em;text-transform:uppercase;color:#3A3935}
+.wrap{max-width:1440px;margin:0 auto;padding:72px 48px 40px}
+.head{display:flex;justify-content:space-between;align-items:baseline;gap:16px;margin-bottom:36px}
+.head h2{margin:0;font-size:32px;font-weight:300}
+.grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(250px,1fr));gap:44px 24px}
+.card{display:flex;flex-direction:column;gap:14px;cursor:pointer;background:none;border:0;padding:0;text-align:left;color:inherit}
+.card .im{aspect-ratio:3/4;background:#fff;overflow:hidden}
+.card img{width:100%;height:100%;object-fit:cover;display:block;transition:transform .5s ease}
+.card:hover img{transform:scale(1.03)}
+.b{font-size:12px;letter-spacing:.14em;text-transform:uppercase;color:#5A5853}
+.n{font-size:16px;font-weight:400}
+.pr{font-size:15px}
+.services{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:40px;padding:72px 48px;border-top:1px solid #E2E0DA;border-bottom:1px solid #E2E0DA;margin-top:56px}
+.services h3{margin:8px 0;font-size:20px;font-weight:400}.services p{margin:0;font-size:15px;line-height:1.6;color:#3A3935}
+.store{display:flex;flex-wrap:wrap}
+.store .dark{flex:1 1 480px;background:#141414;color:#F6F5F2;display:flex;flex-direction:column;align-items:center;justify-content:center;min-height:400px;gap:6px}
+.store .info{flex:1 1 480px;padding:72px 64px;display:flex;flex-direction:column;justify-content:center;gap:18px}
+.store h2{margin:0;font-size:40px;font-weight:300;line-height:1.1}
+footer{background:#141414;color:#CFCCC4;padding:56px 48px;display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:32px;font-size:14px;line-height:2}
+footer .t{color:#F6F5F2;letter-spacing:.12em;text-transform:uppercase;font-size:12px}
+footer input{background:transparent;border:0;border-bottom:1px solid #8A877F;color:#F6F5F2;font:inherit;font-size:15px;padding:10px 0;width:100%}
+footer button{margin-top:10px;background:#F6F5F2;color:#141414;border:0;font-size:12px;letter-spacing:.12em;text-transform:uppercase;padding:12px 22px;min-height:44px}
+/* produto */
+.pdp{display:flex;flex-wrap:wrap;gap:56px;padding:40px 48px 72px;max-width:1440px;margin:0 auto}
+.gal{flex:999 1 560px;min-width:0;display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:12px}
+.gal div{aspect-ratio:3/4;background:#fff;overflow:hidden}.gal img{width:100%;height:100%;object-fit:cover;display:block}
+.buy{flex:1 1 340px;max-width:460px;display:flex;flex-direction:column;gap:22px;align-self:flex-start;position:sticky;top:120px}
+.buy h1{margin:0;font-size:30px;font-weight:300;line-height:1.2}
+.sizes{display:flex;flex-wrap:wrap;gap:8px}
+.sizes button{min-width:56px;min-height:44px;padding:0 14px;font-size:14px;background:transparent;color:#141414;border:1px solid #C9C6BF}
+.sizes button.on{background:#141414;color:#F6F5F2;border-color:#141414}
+.cta{background:#141414;color:#F6F5F2;border:0;font-size:13px;letter-spacing:.14em;text-transform:uppercase;padding:18px;min-height:52px}
+.cta2{background:transparent;color:#141414;border:1px solid #141414;font-size:13px;letter-spacing:.14em;text-transform:uppercase;padding:18px;min-height:52px}
+.buy ul{list-style:none;margin:0;padding:18px 0;border-top:1px solid #E2E0DA;border-bottom:1px solid #E2E0DA;display:flex;flex-direction:column;gap:10px;font-size:14px;color:#3A3935}
+.wa{display:flex;justify-content:space-between;padding:16px 20px;background:#ECEAE5;font-size:14px}
+.back{display:inline-block;padding:28px 48px 0;font-size:13px;letter-spacing:.08em;text-transform:uppercase}
+.toast{position:fixed;left:50%;bottom:28px;transform:translateX(-50%);background:#141414;color:#F6F5F2;padding:14px 22px;font-size:14px;opacity:0;transition:opacity .3s;pointer-events:none;max-width:90vw;text-align:center}
+.toast.show{opacity:1}
+[hidden]{display:none!important}
+@media (max-width:760px){
+ header{padding:14px 20px}header nav{display:none}.burger{display:flex;align-items:center;flex:1}
+ header .right .hide-m{display:none}
+ .logo .p{font-size:30px}.logo .la{font-size:12px}
+ .hero .txt{padding:40px 20px}.hero .pic img{height:420px}
+ .brands{padding:20px;gap:10px 22px;font-size:12px}
+ .wrap{padding:48px 20px 24px}.grid{grid-template-columns:repeat(2,minmax(0,1fr));gap:28px 12px}
+ .services{padding:48px 20px}.store .info{padding:48px 20px}footer{padding:40px 20px}
+ .pdp{padding:20px 20px 48px;gap:28px}.back{padding:20px 20px 0}.buy{position:static}
+}
+</style>
+</head>
+<body>
+<div class="concept">Conceito de loja online para a La Punta Foz · proposta de Anton Eremin · não é o site oficial e não aceita encomendas</div>
+<div class="bar">Entrega no mesmo dia no Porto · Levantamento na loja da Foz · Devoluções em 30 dias</div>
+<header>
+<button class="burger" aria-label="Menu"><svg width="22" height="14" viewBox="0 0 22 14" aria-hidden="true"><path d="M0 1h22M0 7h22M0 13h22" stroke="#141414" stroke-width="1.2"/></svg></button>
+<nav aria-label="Categorias"><a href="#inicio">Novidades</a><a href="#marcas">Marcas</a><a href="#novidades">Casacos</a><a href="#novidades">Malhas</a><a href="#novidades">Calçado</a></nav>
+<a class="logo" href="#inicio" aria-label="La Punta — início"><span class="la">la</span><span class="p">punta</span><span class="s">men / style / store</span></a>
+<div class="right"><a class="hide-m" href="#novidades">Pesquisar</a><a class="hide-m" href="#inicio">Conta</a><a href="#inicio" id="bagl">Saco (0)</a></div>
+</header>
+
+<main id="home">
+<section class="hero">
+<div class="txt">
+<span class="eyebrow">Inverno 2026</span>
+<h1>Casacos para o Atlântico.</h1>
+<p>C.P. Company, Parajumpers, Blauer, Aspesi. Selecionados na Foz, entregues em sua casa.</p>
+<a class="link" href="#novidades">Ver novidades</a>
+</div>
+<div class="pic"><img src="img/aspesi.jpg" alt="Aspesi, gabardine de algodão azul-marinho"></div>
+</section>
+<div class="brands" id="marcas"><span>C.P. Company</span><span>Jacob Cohën</span><span>Aspesi</span><span>Myths</span><span>Briglia 1949</span><span>RRD</span><span>Xacus</span><span>MC2 Saint Barth</span><span>Blauer</span><span>Parajumpers</span><span>Premiata</span><span>Autry</span><span>Boss</span></div>
+<section class="wrap" id="novidades">
+<div class="head"><h2>Novidades da semana</h2><a class="link" href="#novidades">Ver tudo</a></div>
+<div class="grid" id="grid"></div>
+</section>
+<section class="services">
+<div><span class="b">01</span><h3>Entrega em casa</h3><p>No mesmo dia no Porto e em 24–48 h em Portugal continental.</p></div>
+<div><span class="b">02</span><h3>Reservar para provar</h3><p>Escolha online, separamos o seu tamanho e prova na loja sem compromisso.</p></div>
+<div><span class="b">03</span><h3>Aconselhamento</h3><p>Fale com a equipa da loja por WhatsApp: tamanhos, combinações, disponibilidade.</p></div>
+<div><span class="b">04</span><h3>Levantamento na Foz</h3><p>Compre online e recolha na Rua do Marechal Saldanha.</p></div>
+</section>
+<section class="store">
+<div class="dark"><span style="font-size:22px">la</span><span style="font-size:96px;line-height:.9">punta</span><span style="font-size:12px;letter-spacing:.22em;margin-top:10px">MEN / STYLE / STORE · FOZ</span></div>
+<div class="info">
+<span class="eyebrow">A loja</span>
+<h2>Na Foz, a dois passos do mar.</h2>
+<p style="margin:0;font-size:16px;line-height:1.7;color:#3A3935;max-width:460px">Marcas italianas e europeias escolhidas peça a peça, para quem prefere qualidade a tendências.</p>
+<address style="font-style:normal;font-size:15px;line-height:1.7">Rua do Marechal Saldanha, 69<br>4150-655 Porto</address>
+</div>
+</section>
+</main>
+
+<main id="produto" hidden>
+<a class="back" href="#novidades">← Novidades</a>
+<div class="pdp">
+<div class="gal" id="gal"></div>
+<div class="buy">
+<div style="display:flex;flex-direction:column;gap:8px"><span class="b" id="pb"></span><h1 id="pn"></h1><span style="font-size:20px" id="pp"></span></div>
+<div><div class="b" style="margin-bottom:12px">Tamanho</div><div class="sizes" id="sizes"></div></div>
+<button class="cta" id="add">Adicionar ao saco</button>
+<button class="cta2" id="res">Reservar para provar na loja</button>
+<ul><li>Disponível na loja da Foz hoje</li><li>Entrega no Porto no mesmo dia (encomendas até às 14h)</li><li>Devoluções gratuitas em 30 dias</li></ul>
+<p style="margin:0;font-size:15px;line-height:1.7;color:#3A3935" id="pd"></p>
+<a class="wa" href="#produto"><span>Dúvidas sobre o tamanho? Fale connosco no WhatsApp</span><span aria-hidden="true">→</span></a>
+</div>
+</div>
+</main>
+
+<footer>
+<div style="display:flex;flex-direction:column"><span style="color:#F6F5F2;font-size:28px">la punta</span><span style="font-size:11px;letter-spacing:.18em">MEN / STYLE / STORE</span></div>
+<div style="display:flex;flex-direction:column"><span class="t">Apoio</span><span>Envios e entregas</span><span>Trocas e devoluções</span><span>Guia de tamanhos</span></div>
+<div style="display:flex;flex-direction:column"><span class="t">Contacto</span><span>WhatsApp</span><span>Instagram @lapuntafoz</span><span>Livro de Reclamações</span></div>
+<form id="nl"><label class="t" for="em">Novidades por e-mail</label><input id="em" type="email" placeholder="o seu e-mail"><button type="submit">Subscrever</button></form>
+</footer>
+<div class="toast" id="toast" role="status"></div>
+
+<script>
+var P=[
+{id:'parajumpers',b:'Parajumpers',n:'Blusão Tuam',p:'€ 544',d:'Blusão leve em nylon técnico, gola alta com fecho e os detalhes de cor típicos da marca.',with:['briglia','premiata','cp_knit']},
+{id:'cpcompany',b:'C.P. Company',n:'Blusão Nycra-R com lente',p:'€ 444',d:'Blusão em nylon Nycra-R, gola alta com fecho até cima, bolsos com fecho e o detalhe icónico da lente no bolso da manga.',with:['cp_knit','briglia','premiata']},
+{id:'blauer',b:'Blauer',n:'Casaco de penas Wave',p:'€ 491',d:'Casaco de penas com capuz, painéis técnicos e acolchoado ondulado. Para os dias de vento na marginal.',with:['jacobcohen','premiata','cp_knit']},
+{id:'aspesi',b:'Aspesi',n:'Gabardine de algodão',p:'€ 549',d:'Gabardine leve de corte direito, gola clássica e abotoamento simples. Uma peça para muitos anos.',with:['cp_knit','briglia','premiata']},
+{id:'cp_knit',b:'C.P. Company',n:'Camisola de lã com lente',p:'€ 271',d:'Camisola de lã de gola redonda com reforços nos ombros e a lente no bolso da manga.',with:['cpcompany','jacobcohen','premiata']},
+{id:'briglia',b:'Briglia 1949',n:'Calça com pinças',p:'€ 202',d:'Calça de algodão com pinças e perna afunilada, feita em Itália.',with:['aspesi','cp_knit','premiata']},
+{id:'jacobcohen',b:'Jacob Cohën',n:'Jeans Nick',p:'€ 437',d:'Jeans de corte slim em sarja tingida, com os acabamentos artesanais da marca.',with:['blauer','cp_knit','premiata']},
+{id:'premiata',b:'Premiata',n:'Ténis Mick',p:'€ 266',d:'Ténis em camurça e nylon com a sola pintada à mão que distingue a Premiata.',with:['cpcompany','briglia','jacobcohen']}
+];
+var bag=0,size='50',cur=null;
+function byId(i){for(var k=0;k<P.length;k++)if(P[k].id===i)return P[k];return P[0];}
+function el(t,c,h){var e=document.createElement(t);if(c)e.className=c;if(h!=null)e.innerHTML=h;return e;}
+var g=document.getElementById('grid');
+P.forEach(function(p){var c=el('button','card');c.type='button';c.setAttribute('aria-label',p.b+', '+p.n+', '+p.p);
+c.innerHTML='<div class="im"><img src="img/'+p.id+'.jpg" alt=""></div><div style="display:flex;flex-direction:column;gap:4px"><span class="b">'+p.b+'</span><span class="n">'+p.n+'</span><span class="pr">'+p.p+'</span></div>';
+c.onclick=function(){location.hash='p-'+p.id;};g.appendChild(c);});
+function toast(m){var t=document.getElementById('toast');t.textContent=m;t.classList.add('show');clearTimeout(t._h);t._h=setTimeout(function(){t.classList.remove('show')},2600);}
+function renderSizes(){var s=document.getElementById('sizes');s.innerHTML='';['46','48','50','52','54'].forEach(function(l){var b=el('button',l===size?'on':'',l);b.type='button';b.setAttribute('aria-pressed',l===size);b.onclick=function(){size=l;renderSizes();};s.appendChild(b);});document.getElementById('add').textContent='Adicionar ao saco — tamanho '+size;}
+function showProduct(id){var p=byId(id);cur=p;
+document.getElementById('pb').textContent=p.b;document.getElementById('pn').textContent=p.n;document.getElementById('pp').textContent=p.p;document.getElementById('pd').textContent=p.d;
+var gl=document.getElementById('gal');gl.innerHTML='';[p.id].concat(p.with).forEach(function(i,k){var d=el('div');var im=el('img');im.src='img/'+i+'.jpg';im.alt=k?'Combina com: '+byId(i).b+', '+byId(i).n:p.b+', '+p.n;d.appendChild(im);gl.appendChild(d);});
+renderSizes();}
+document.getElementById('add').onclick=function(){bag++;document.getElementById('bagl').textContent='Saco ('+bag+')';toast(cur.n+', tamanho '+size+', adicionado ao saco (demonstração)');};
+document.getElementById('res').onclick=function(){toast('Pedido de reserva: '+cur.n+', tamanho '+size+'. A loja confirma por WhatsApp (demonstração)');};
+document.getElementById('nl').onsubmit=function(e){e.preventDefault();toast('Obrigado! (demonstração)');};
+function route(){var h=location.hash.slice(1);var prod=h.indexOf('p-')===0;
+document.getElementById('home').hidden=prod;document.getElementById('produto').hidden=!prod;
+if(prod){showProduct(h.slice(2));window.scrollTo(0,0);}else if(h==='novidades'||h==='marcas'){var t=document.getElementById(h);if(t)t.scrollIntoView();}else{window.scrollTo(0,0);}}
+window.addEventListener('hashchange',route);route();
+</script>
+</body>
+</html>
